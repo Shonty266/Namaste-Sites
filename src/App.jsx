@@ -6,6 +6,7 @@ import Portfolio from './Views/Portfolio/Portfolio';
 import About from './Views/About/About';
 import Contact from './Views/Contact/ContactModal';
 import Footer from './Views/Footer/Footer';
+import { Toaster } from 'react-hot-toast';
 import './App.css';
 
 const Divider = () => (
@@ -164,6 +165,18 @@ const App = () => {
       
       <Footer />
       <ScrollToTop />
+      <Toaster 
+        position="bottom-right"
+        toastOptions={{
+          className: '',
+          style: {
+            background: '#1e1e2e',
+            color: '#fff',
+            borderRadius: '8px',
+            border: '1px solid #374151',
+          },
+        }}
+      />
     </div>
   );
 };
