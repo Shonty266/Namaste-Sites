@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import emailjs from '@emailjs/browser'
 import toast from 'react-hot-toast'
+import '../../Fonts.css'
 
 const ContactModal = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
@@ -143,12 +144,10 @@ const ContactModal = ({ isOpen, onClose }) => {
           <div className="relative p-6 rounded-xl bg-[#1e1e2e]/95 backdrop-blur-xl border border-gray-800 shadow-2xl"> {/* Reduced padding */}
             {/* Header */}
             <div className="text-center mb-6"> {/* Reduced margin */}
-              <span className="text-xs font-semibold text-purple-400 tracking-wider uppercase">
-                Get In Touch
-              </span>
-              <h2 className="text-xl font-bold mt-1 mb-2 text-white"> {/* Reduced text and margins */}
-                Let's Create Something Amazing Together
-              </h2>
+              <div className="font-clash">
+                <span className="text-xs font-clash-semibold text-purple-400">Get In Touch</span>
+                <h2 className="text-xl font-clash-bold">Let's Create Something Amazing Together</h2>
+              </div>
             </div>
 
             {/* Form content */}
@@ -156,7 +155,7 @@ const ContactModal = ({ isOpen, onClose }) => {
               {/* Name and Email Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4"> {/* Reduced gap */}
                 <div className="relative">
-                  <label htmlFor="name" className="block text-xs font-medium text-gray-400 mb-1">
+                  <label htmlFor="name" className="block text-xs font-clash-medium text-gray-400 mb-1">
                     Your Name
                   </label>
                   <input

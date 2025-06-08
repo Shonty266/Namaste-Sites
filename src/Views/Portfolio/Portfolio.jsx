@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import '../../Fonts.css'
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState('all')
@@ -69,33 +70,20 @@ const Portfolio = () => {
     : projects.filter(project => project.category === activeFilter)
 
   return (
-    <section className="py-20 bg-[#121212] text-gray-100">
+    <section className="py-20 bg-[#121212] text-gray-100 font-clash">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-sm font-semibold text-purple-400 tracking-wider uppercase">Our Work</span>
-          <h2 className="text-4xl font-bold mt-2 mb-4">Featured Projects</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            Explore our demo projects that showcase our technical capabilities and design aesthetics.
-          </p>
-        </div>
+  <span className="text-sm font-clash-semibold text-purple-400 tracking-wider uppercase">Our Work</span>
+  <h2 className="text-4xl font-clash-bold mt-2 mb-4">Showcasing What We Build</h2>
+  <p className="text-gray-400 max-w-2xl mx-auto">
+    Take a look at some of our highlighted projects — crafted with creativity, built with precision, and tailored to solve real-world problems.
+  </p>
+</div>
+
 
         {/* Filter Buttons */}
-        <div className="flex justify-center gap-4 mb-12">
-          {['all', 'web', 'design'].map((filter) => (
-            <button
-              key={filter}
-              onClick={() => filterProjects(filter)}
-              className={`px-6 py-2 rounded-full transition-all duration-300 ${
-                activeFilter === filter
-                  ? 'bg-gradient-to-r from-purple-500 to-teal-500 text-white'
-                  : 'bg-gray-800/50 text-gray-400 hover:text-white'
-              }`}
-            >
-              {filter.charAt(0).toUpperCase() + filter.slice(1)}
-            </button>
-          ))}
-        </div>
+        
 
         {/* Projects Grid - Updated with smaller cards and 4 columns */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
@@ -119,8 +107,8 @@ const Portfolio = () => {
 
               {/* Project Info - More compact */}
               <div className="p-3">
-                <h3 className="text-base font-semibold mb-1">{project.title}</h3>
-                <p className="text-xs text-gray-400 mb-2 line-clamp-2">{project.description}</p>
+                <h3 className="text-base font-clash-semibold mb-1">{project.title}</h3>
+                <p className="font-clash-regular text-xs text-gray-400">{project.description}</p>
                 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-1 mb-2">

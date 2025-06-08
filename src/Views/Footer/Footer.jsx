@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaGithub, FaLinkedinIn, FaTwitter, FaInstagram, FaRocket, FaCode, FaHeart } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
+import '../../Fonts.css'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -23,8 +24,8 @@ const Footer = () => {
   return (
     <>
     
-      <footer className="relative bg-[#0f0f0f] text-gray-100 pb-8">
-         <div className="mb-12 flex items-center justify-center">
+      <footer className="relative bg-[#0f0f0f] text-gray-100 font-clash">
+        <div className="mb-12 flex items-center justify-center">
             <div className="w-full h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent"></div>
           </div>
 
@@ -48,18 +49,11 @@ const Footer = () => {
                 <div className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-500/50 to-teal-500/50 rounded-xl blur-sm group-hover:blur-md transition-all duration-500"></div>
                   <div className="relative w-12 h-12 bg-[#0f0f0f] rounded-xl flex items-center justify-center border border-white/5">
-                    <span className="text-white font-bold text-xl">NS</span>
+                    <span className="text-white font-clash-bold text-xl">NS</span>
                   </div>
                 </div>
-                <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent tracking-tight">
+                <div className="text-2xl font-clash-bold bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent tracking-tight">
                   Namaste Sites
-                   <div className="flex items-center gap-3 text-base">
-                <span className="text-purple-400 font-medium">Think</span>
-                <span className="w-1.5 h-1.5 rounded-full bg-gray-600/50"></span>
-                <span className="text-teal-400 font-medium">Code</span>
-                <span className="w-1.5 h-1.5 rounded-full bg-gray-600/50"></span>
-                <span className="bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent font-medium">Deliver</span>
-              </div>
                 </div>
                 
               </div>
@@ -72,7 +66,7 @@ const Footer = () => {
 
             {/* Quick Links - Updated */}
             <div>
-              <h3 className="text-base font-semibold uppercase tracking-wider mb-6 bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent">
+              <h3 className="text-base font-clash-semibold uppercase tracking-wider mb-6 bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent">
                 Quick Links
               </h3>
               <ul className="space-y-3">
@@ -92,16 +86,16 @@ const Footer = () => {
 
             {/* Connect Section - Updated */}
             <div>
-              <h3 className="text-base font-semibold uppercase tracking-wider mb-6 bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent">
+              <h3 className="text-base font-clash-semibold uppercase tracking-wider mb-6 bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent">
                 Connect
               </h3>
               <div className="space-y-6">
                 <a
-                  href="mailto:info@namastesites.com"
+                  href="mailto:namastesites@outlook.com"
                   className="text-gray-400 hover:text-white transition-colors duration-300 text-base flex items-center gap-3 group"
                 >
                   <MdEmail size={20} className="text-purple-400 group-hover:text-teal-400 transition-colors duration-300" />
-                  info@namastesites.com
+                  namastesites@outlook.com
                 </a>
                 <div className="flex gap-4">
                   {links.connect.map((link, index) => (

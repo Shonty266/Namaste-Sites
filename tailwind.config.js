@@ -2,7 +2,14 @@ module.exports = {
   // ...existing config
   theme: {
     extend: {
-      // ...existing extensions
+      fontFamily: {
+        'clash': ['ClashDisplay-Variable', 'sans-serif'],
+        'clash-bold': ['ClashDisplay-Bold', 'sans-serif'],
+        'clash-semibold': ['ClashDisplay-Semibold', 'sans-serif'],
+        'clash-medium': ['ClashDisplay-Medium', 'sans-serif'],
+        'clash-light': ['ClashDisplay-Light', 'sans-serif'],
+        'clash-regular': ['ClashDisplay-Regular', 'sans-serif'],
+      },
       animation: {
         shimmer: 'shimmer 2s linear infinite',
         'pulse-slow': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
@@ -26,4 +33,5 @@ module.exports = {
       },
     },
   },
+  // ...rest of config
 }

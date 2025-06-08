@@ -1,13 +1,23 @@
 import React, { useEffect, useState } from 'react'
-import HeroImage from "../../assets/HeroImage.png";
+import HeroImage from "../../assets/HeroImage.png"
+import ContactModal from '../Contact/ContactModal'
 import '../../Fonts.css'
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false)
-
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false)
+  
   useEffect(() => {
     setIsVisible(true)
   }, [])
+
+  const handleContactClick = () => {
+    setIsContactModalOpen(true)
+  }
+
+  const handleCloseModal = () => {
+    setIsContactModalOpen(false)
+  }
 
   return (
     <section id="home" className="min-h-screen relative overflow-hidden flex items-center bg-gradient-to-b from-[#0f0f0f] to-[#121212] text-gray-100 pt-20 lg:pt-4">
@@ -41,26 +51,32 @@ const HeroSection = () => {
               </h1>
             </div>
             
-            <p className="text-base sm:text-lg md:text-xl max-w-2xl mx-auto md:mx-0 text-gray-400 leading-relaxed">
-              A young team of passionate developers ready to bring your vision to life. 
-              We combine modern tech with creative solutions to build your digital presence.
-            </p>
+    <p className="text-base sm:text-lg md:text-xl max-w-2xl mx-auto md:mx-0 text-gray-400 leading-relaxed">
+  We create mobile-friendly websites for roofing businesses — designed to attract more clients and grow your online presence.
+</p>
+
+
             
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-4 justify-center md:justify-start">
-              <a 
-                href="#contact" 
-                className="group relative px-6 sm:px-8 py-3 sm:py-4 rounded-xl bg-gradient-to-r from-purple-500 to-teal-500 text-white font-medium overflow-hidden w-full sm:w-auto text-center"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-teal-600 transition-transform duration-300 group-hover:scale-105"></div>
-                <span className="relative">Get Started Free</span>
-              </a>
-              <a 
-                href="#portfolio" 
-                className="px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-medium border border-gray-700 hover:border-purple-500/50 transition-all duration-300 hover:bg-purple-500/5 w-full sm:w-auto text-center"
-              >
-                See Our Process
-              </a>
-            </div>
+  <button 
+    onClick={() => setIsContactModalOpen(true)}
+    className="group relative px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-white font-medium overflow-hidden w-full sm:w-auto text-center transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-500/25 cursor-pointer"
+  >
+    <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-teal-500 transition-all duration-300 group-hover:scale-110"></div>
+    <div className="absolute inset-0 opacity-0 group-hover:opacity-20 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.4),transparent_75%)]"></div>
+    <span className="relative inline-flex items-center">
+      <span>Get Your Website Designed</span>
+      <svg 
+        className="ml-2 w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-1" 
+        fill="none" 
+        stroke="currentColor" 
+        viewBox="0 0 24 24"
+      >
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+      </svg>
+    </span>
+  </button>
+</div>
           </div>
           
           {/* Right column - Illustration/Image */}
@@ -93,6 +109,11 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+
+      <ContactModal 
+      isOpen={isContactModalOpen}
+      onClose={() => setIsContactModalOpen(false)}
+    />
     </section>
   )
 }

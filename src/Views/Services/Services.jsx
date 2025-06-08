@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../Fonts.css'
 
 const Services = () => {
   const services = [
@@ -30,16 +31,17 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-20 bg-[#121212] text-gray-100">
+    <section className="py-20 bg-[#121212] text-gray-100 font-clash">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <span className="text-sm font-semibold text-purple-400 tracking-wider uppercase">Young & Ambitious</span>
-          <h2 className="text-4xl font-bold mt-2 mb-4">Our Services</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            A young team with fresh ideas and modern tech stack. We might be new, 
-            but our passion and dedication make us the perfect partner for your next project.
-          </p>
-        </div>
+  <span className="text-sm font-clash-semibold text-purple-400 uppercase tracking-widest">Our Services</span>
+  <h2 className="text-4xl font-clash-bold">Crafting Solutions That Drive Success</h2>
+  <p className="font-clash-regular text-gray-400 max-w-2xl mx-auto">
+    From sleek, responsive web design to powerful SEO strategies, our services are built to help your business stand out and grow. We blend creativity with technology to deliver custom solutions that match your unique goals.
+  </p>
+</div>
+
+
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
@@ -50,14 +52,14 @@ const Services = () => {
               <div className="absolute top-0 right-0 w-20 h-20 bg-purple-500/10 rounded-bl-full transform translate-x-10 -translate-y-10 group-hover:translate-x-8 group-hover:-translate-y-8 transition-transform duration-300"></div>
               
               <div className="text-4xl mb-4">{service.icon}</div>
-              <h3 className="text-2xl font-semibold mb-3">{service.title}</h3>
-              <p className="text-gray-400 mb-4">{service.description}</p>
+              <h3 className="text-2xl font-clash-semibold mb-3">{service.title}</h3>
+              <p className="font-clash-regular text-gray-400 mb-4">{service.description}</p>
               
               <div className="flex flex-wrap gap-2 mt-4">
                 {service.tags.map((tag, tagIndex) => (
                   <span 
                     key={tagIndex}
-                    className="text-xs px-2 py-1 bg-purple-900/30 text-purple-300 rounded-full"
+                    className="font-clash-medium text-xs px-2 py-1 bg-purple-900/30 text-purple-300 rounded-full"
                   >
                     {tag}
                   </span>

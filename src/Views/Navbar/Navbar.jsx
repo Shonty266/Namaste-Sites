@@ -94,19 +94,19 @@ const Navbar = () => {
             {/* Logo */}
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2 cursor-pointer" onClick={() => window.location.reload()}>
                   <div className="w-10 h-10 relative group animate-pulse-slow">
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-teal-500 rounded-xl blur-sm group-hover:blur-md transition-all duration-300"></div>
-                    <div className="relative w-full h-full bg-[#0f0f0f] rounded-xl flex items-center justify-center border border-white/10">
-                      <span className="text-white font-bold text-xl bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent animate-gradient-x">NS</span>
+                    <div className="relative w-full h-full bg-[#0f0f0f] rounded-xl flex items-center justify-center border border-white/10 text-white">
+                      <span className="font-clash-bold text-xl">NS</span>
                     </div>
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent animate-gradient-x">
+                    <span className="text-xl font-clash-bold bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent">
                       Namaste Sites
                     </span>
                     <div className="flex items-center gap-2 text-xs mt-0.5">
-                      <span className="text-purple-400 font-medium hover:scale-110 transition-transform">Think</span>
+                      <span className="font-clash-medium text-purple-400">Think</span>
                       <span className="w-1 h-1 rounded-full bg-gray-600/50"></span>
                       <span className="text-teal-400 font-medium hover:scale-110 transition-transform">Code</span>
                       <span className="w-1 h-1 rounded-full bg-gray-600/50"></span>
@@ -136,7 +136,8 @@ const Navbar = () => {
                 className="ml-4 px-4 py-2 relative group overflow-hidden rounded-lg cursor-pointer"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-teal-500 transition-transform duration-300 group-hover:scale-105"></div>
-                <span className="relative text-white font-medium">Get Started</span>
+                                  <span className="relative text-white font-medium">Request a Free Quote</span>
+
               </button>
             </div>
             
@@ -197,7 +198,8 @@ const Navbar = () => {
                   className="w-full px-4 py-3 relative group overflow-hidden rounded-lg"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-teal-500 transition-transform duration-300 group-hover:scale-105"></div>
-                  <span className="relative text-white font-medium">Get Started</span>
+                  <span className="relative text-white font-medium">Request a Free Quote</span>
+
                 </button>
               </div>
             </div>

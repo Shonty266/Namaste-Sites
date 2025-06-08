@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import ContactModal from '../Contact/ContactModal'
+import '../../Fonts.css'
 
 const About = () => {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false)
@@ -30,21 +31,21 @@ const About = () => {
   ];
 
   return (
-    <section className="py-20 bg-[#121212] text-gray-100">
+    <section className="py-20 bg-[#121212] text-gray-100 font-clash">
       <div className="container mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-16">
-          <span className="text-sm font-semibold text-purple-400 tracking-wider uppercase">
-            About Us
-          </span>
-          <h2 className="text-4xl font-bold mt-2 mb-4">
-            Young, Dynamic & Passionate
-          </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            We're a team of young developers and designers passionate about creating 
-            innovative digital solutions for modern businesses.
-          </p>
-        </div>
+       <div className="text-center mb-16">
+  <span className="text-sm font-clash-semibold text-purple-400 tracking-wider uppercase">
+    About Us
+  </span>
+  <h2 className="text-4xl font-clash-bold mt-2 mb-4">
+    Creative Minds, Modern Solutions
+  </h2>
+  <p className="font-clash-regular text-gray-400 max-w-2xl mx-auto">
+    We’re a passionate team of young developers and designers focused on building smart, scalable, and visually striking digital experiences for growing brands.
+  </p>
+</div>
+
 
         {/* Stats Section - New */}
         <div className="mb-16">
@@ -54,10 +55,10 @@ const About = () => {
                 key={index}
                 className="text-center p-6 rounded-xl bg-[#1e1e2e] border border-gray-800 hover:border-purple-500/30 transition-all duration-300"
               >
-                <div className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent mb-2">
+                <div className="text-3xl font-clash-bold bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent mb-2">
                   {stat.number}
                 </div>
-                <div className="text-sm text-gray-400">{stat.label}</div>
+                <div className="text-sm font-clash-medium text-gray-400">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -66,19 +67,19 @@ const About = () => {
         {/* Mission & Vision */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           <div className="p-6 rounded-xl bg-[#1e1e2e] border border-gray-800 hover:border-purple-500/30 transition-colors">
-            <h3 className="text-xl font-semibold mb-4 bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent">
+            <h3 className="text-xl font-clash-semibold mb-4 bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent">
               Our Mission
             </h3>
-            <p className="text-gray-400">
+            <p className="font-clash-regular text-gray-400">
               To empower businesses with cutting-edge web solutions that drive growth 
               and enhance digital presence, making technology accessible and impactful.
             </p>
           </div>
           <div className="p-6 rounded-xl bg-[#1e1e2e] border border-gray-800 hover:border-teal-500/30 transition-colors">
-            <h3 className="text-xl font-semibold mb-4 bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent">
+            <h3 className="text-xl font-clash-semibold mb-4 bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent">
               Our Vision
             </h3>
-            <p className="text-gray-400">
+            <p className="font-clash-regular text-gray-400">
               To become a leading force in web development, known for innovative solutions 
               and exceptional client satisfaction across diverse industries.
             </p>
