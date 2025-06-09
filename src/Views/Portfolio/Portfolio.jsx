@@ -1,11 +1,11 @@
 import React from 'react'
 import '../../Fonts.css'
-import belmondImg from '../../Images/portfolio/Belmond.png'
-import furnitureImg from '../../Images/portfolio/Furniture.png'
-import goGlobeImg from '../../Images/portfolio/Go Globe.png'
-import homeVoyageImg from '../../Images/portfolio/Home Voyage.png'
-import smartCubeImg from '../../Images/portfolio/Smart Cube.png'
-import billEaseImg from '../../Images/portfolio/Bill Ease.png'
+import belmondImg from '../../Images/portfolio/Belmond.svg'
+import furnitureImg from '../../Images/portfolio/Furniture.svg'
+import goGlobeImg from '../../Images/portfolio/Go Globe.svg'
+import homeVoyageImg from '../../Images/portfolio/Home Voyage.svg'
+import smartCubeImg from '../../Images/portfolio/Smart Cube.svg'
+import billEaseImg from '../../Images/portfolio/Bill Ease.svg'
 
 const Portfolio = () => {
   const projects = [
@@ -70,13 +70,13 @@ const Portfolio = () => {
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-sm font-clash-semibold text-purple-400 tracking-wider uppercase">
+          <span className="text-sm font-['ClashDisplay-Semibold'] text-purple-400 tracking-wider uppercase">
             Our Work
           </span>
-          <h2 className="text-4xl font-clash-bold mt-2 mb-4">
+          <h2 className="text-4xl font-['ClashDisplay-SemiBold'] mt-2 mb-4">
             Showcasing What We Build
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="font-['ClashDisplay-Regular'] text-gray-400 max-w-2xl mx-auto">
             Take a look at some of our highlighted projects — crafted with creativity, built with precision, and tailored to solve real-world problems.
           </p>
         </div>
@@ -103,8 +103,8 @@ const Portfolio = () => {
 
               {/* Project Info */}
               <div className="p-3 flex flex-col flex-grow">
-                <h3 className="text-base font-clash-semibold mb-1">{project.title}</h3>
-                <p className="font-clash-regular text-xs text-gray-400 line-clamp-2">{project.description}</p>
+                <h3 className="text-base font-['ClashDisplay-Semibold'] mb-1">{project.title}</h3>
+                <p className="font-['ClashDisplay-Regular'] text-xs text-gray-400 line-clamp-2">{project.description}</p>
                 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-1 mb-2 mt-4">

@@ -122,7 +122,7 @@ const Footer = () => {
           </div>
 
           {/* Bottom Bar - Updated */}
-          <div className="mt-16 pt-8 border-t border-gray-800/50">
+          <div className="mt-16 py-8 border-t border-gray-800/50">
             <p className="text-sm text-gray-400 text-center">
               © {currentYear} Namaste Sites. All rights reserved.
             </p>

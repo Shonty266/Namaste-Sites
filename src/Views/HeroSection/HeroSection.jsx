@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import HeroImage from "../../assets/Hero Image.png"
+import HeroImage from "../../assets/Hero Image.svg"
 import ContactModal from '../Contact/ContactModal'
 import '../../Fonts.css'
 

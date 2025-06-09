@@ -35,14 +35,14 @@ const About = () => {
       <div className="container mx-auto px-6">
         {/* Header */}
        <div className="text-center mb-16">
-  <span className="text-sm font-clash-semibold text-purple-400 tracking-wider uppercase">
+  <span className="text-sm font-['ClashDisplay-Semibold'] text-purple-400 tracking-wider uppercase">
     About Us
   </span>
-  <h2 className="text-4xl font-clash-bold mt-2 mb-4">
+  <h2 className="text-4xl font-['ClashDisplay-SemiBold'] mt-2 mb-4">
     Creative Minds, Modern Solutions
   </h2>
-  <p className="font-clash-regular text-gray-400 max-w-2xl mx-auto">
-    We’re a passionate team of young developers and designers focused on building smart, scalable, and visually striking digital experiences for growing brands.
+  <p className="font-['ClashDisplay-Regular'] text-gray-400 max-w-2xl mx-auto">
+    We're a passionate team of young developers and designers focused on building smart, scalable, and visually striking digital experiences for growing brands.
   </p>
 </div>
 
@@ -55,7 +55,7 @@ const About = () => {
                 key={index}
                 className="text-center p-6 rounded-xl bg-[#1e1e2e] border border-gray-800 hover:border-purple-500/30 transition-all duration-300"
               >
-                <div className="text-3xl font-clash-bold bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent mb-2">
+                <div className="text-3xl font-['ClashDisplay-Bold'] bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent mb-2">
                   {stat.number}
                 </div>
                 <div className="text-sm font-clash-medium text-gray-400">{stat.label}</div>
