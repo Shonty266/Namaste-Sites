@@ -25,7 +25,7 @@ const About = () => {
 
   const stats = [
     { number: '100+', label: 'Hours of Development' },
-    { number: '5+', label: 'Projects in Pipeline' },
+    { number: '5+', label: 'Projects Completed' },
     { number: '4+', label: 'Team Members' },
     { number: '24/7', label: 'Support Available' }
   ];

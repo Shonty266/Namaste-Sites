@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import HeroImage from "../../assets/HeroImage.png"
+import HeroImage from "../../assets/Hero Image.png"
 import ContactModal from '../Contact/ContactModal'
 import '../../Fonts.css'
 
@@ -20,7 +20,7 @@ const HeroSection = () => {
   }
 
   return (
-    <section id="home" className="min-h-screen relative overflow-hidden flex items-center bg-gradient-to-b from-[#0f0f0f] to-[#121212] text-gray-100 pt-20 lg:pt-4">
+    <section id="home" className="py-20 relative overflow-hidden flex items-center bg-gradient-to-b from-[#0f0f0f] to-[#121212] text-gray-100 lg:pt-4">
       {/* Background gradient circles - Made responsive */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute w-[300px] md:w-[500px] h-[300px] md:h-[500px] -top-16 md:-top-32 -left-16 md:-left-32 bg-purple-900/20 rounded-full blur-3xl"></div>
@@ -51,7 +51,7 @@ const HeroSection = () => {
               </h1>
             </div>
             
-    <p className="text-base sm:text-lg md:text-xl max-w-2xl mx-auto md:mx-0 text-gray-400 leading-relaxed">
+    <p className="text-base sm:text-lg md:text-lg max-w-2xl mx-auto md:mx-0 text-gray-400 leading-relaxed">
   We create mobile-friendly websites for roofing businesses — designed to attract more clients and grow your online presence.
 </p>
 

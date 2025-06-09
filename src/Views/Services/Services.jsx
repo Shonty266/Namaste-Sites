@@ -23,8 +23,8 @@ const Services = () => {
     },
    
     {
-      title: 'Custom Development',
-      description: 'Small to medium-scale custom solutions that help businesses start their digital journey.',
+      title: 'Custom Softwares Development',
+      description: 'Small to medium-scale custom software solutions that help businesses start their digital journey.',
       icon: '💻',
       tags: ['Flexible', 'Scalable']
     }

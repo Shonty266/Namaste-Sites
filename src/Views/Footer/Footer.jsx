@@ -22,9 +22,15 @@ const Footer = () => {
   }
 
   return (
-    <>
-    
-      <footer className="relative bg-[#0f0f0f] text-gray-100 font-clash">
+    <footer className="relative bg-[#0f0f0f] text-gray-100 font-clash overflow-hidden">
+      {/* Gradient Blobs */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute w-[300px] md:w-[500px] h-[300px] md:h-[500px] -top-16 md:-top-32 -left-16 md:-left-32 bg-purple-900/10 rounded-full blur-3xl"></div>
+        <div className="absolute w-[300px] md:w-[500px] h-[300px] md:h-[500px] -bottom-16 md:-bottom-32 -right-16 md:-right-32 bg-teal-900/10 rounded-full blur-3xl"></div>
+      </div>
+
+      {/* Rest of your footer content */}
+      <div className="container mx-auto px-4 relative z-10">
         <div className="mb-12 flex items-center justify-center">
             <div className="w-full h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent"></div>
           </div>
@@ -122,8 +128,8 @@ const Footer = () => {
             </p>
           </div>
         </div>
-      </footer>
-    </>
+      </div>
+    </footer>
   )
 }
 
