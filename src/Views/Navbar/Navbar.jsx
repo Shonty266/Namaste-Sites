@@ -95,17 +95,17 @@ const Navbar = () => {
             <div className="flex items-center">
               <div className="flex-shrink-0">
                 <div className="flex items-center space-x-2 cursor-pointer" onClick={() => window.location.reload()}>
-                  <div className="w-10 h-10 relative group animate-pulse-slow">
+                  <div className="w-10 h-10 relative group animate-pulse-slow flex items-center justify-center">
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-teal-500 rounded-xl blur-sm group-hover:blur-md transition-all duration-300"></div>
                     <div className="relative w-full h-full bg-[#0f0f0f] rounded-xl flex items-center justify-center border border-white/10 text-white">
-                      <span className="font-clash-bold text-xl">NS</span>
+                      <span className="font-['ClashDisplay-SemiBold'] text-lg">N S</span>
                     </div>
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-xl font-clash-bold bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent">
+                    <span className="text-xl font-['ClashDisplay-SemiBold'] bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent">
                       Namaste Sites
                     </span>
-                    <div className="flex items-center gap-2 text-xs mt-0.5">
+                    <div className="flex items-center gap-2 text-xs mt-0.5 font-['ClashDisplay-SemiBold']">
                       <span className="font-clash-medium text-purple-400">Think</span>
                       <span className="w-1 h-1 rounded-full bg-gray-600/50"></span>
                       <span className="text-teal-400 font-medium hover:scale-110 transition-transform">Code</span>

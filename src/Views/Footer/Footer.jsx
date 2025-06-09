@@ -50,25 +50,37 @@ const Footer = () => {
          
           <div className="grid md:grid-cols-3 gap-12">
             {/* Brand Section - Updated */}
-            <div className="space-y-6">
-              <div className="flex items-center gap-4">
-                <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500/50 to-teal-500/50 rounded-xl blur-sm group-hover:blur-md transition-all duration-500"></div>
-                  <div className="relative w-12 h-12 bg-[#0f0f0f] rounded-xl flex items-center justify-center border border-white/5">
-                    <span className="text-white font-clash-bold text-xl">NS</span>
+          <div className="flex items-center">
+              <div className="flex-shrink-0">
+                <div className="flex flex-col">
+                  <div className="flex items-center space-x-2 cursor-pointer" >
+                    <div className="w-10 h-10 relative group animate-pulse-slow flex items-center justify-center">
+                      <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-teal-500 rounded-xl blur-sm group-hover:blur-md transition-all duration-300"></div>
+                      <div className="relative w-full h-full bg-[#0f0f0f] rounded-xl flex items-center justify-center border border-white/10 text-white">
+                        <span className="font-['ClashDisplay-SemiBold'] text-lg">N S</span>
+                      </div>
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-xl font-['ClashDisplay-SemiBold'] bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent">
+                        Namaste Sites
+                      </span>
+                      <div className="flex items-center gap-2 text-xs mt-0.5 font-['ClashDisplay-SemiBold']">
+                        <span className="font-clash-medium text-purple-400">Think</span>
+                        <span className="w-1 h-1 rounded-full bg-gray-600/50"></span>
+                        <span className="text-teal-400 font-medium hover:scale-110 transition-transform">Code</span>
+                        <span className="w-1 h-1 rounded-full bg-gray-600/50"></span>
+                        <span className="bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent font-medium hover:scale-110 transition-transform">Deliver</span>
+                      </div>
+                    </div>
                   </div>
+                  <p className="mt-4 text-sm font-['ClashDisplay-Regular'] text-gray-400 leading-relaxed max-w-sm">
+                    Your vision, our expertise – building the future of web together.
+                  </p>
                 </div>
-                <div className="text-2xl font-clash-bold bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent tracking-tight">
-                  Namaste Sites
-                </div>
-                
               </div>
-              <p className="mt-4 text-sm text-gray-400 leading-relaxed max-w-sm">
-        
-        Your vision, our expertise – building the future of web together.
-      </p>
-             
+              
             </div>
+            
 
             {/* Quick Links - Updated */}
             <div>
