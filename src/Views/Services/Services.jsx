@@ -4,29 +4,30 @@ import '../../Fonts.css'
 const Services = () => {
   const services = [
     {
-      title: 'Website Development',
-      description: 'From simple landing pages to complex web applications, we bring fresh perspectives and modern solutions.',
-      icon: '🌐',
-      tags: ['React', 'Next.js', 'Tailwind']
-    },
+  title: 'Website Development',
+  description: 'From simple landing pages to complex web applications, we bring fresh perspectives and modern solutions.',
+  icon: '🌐',
+  tags: ['Responsive', 'SEO-Friendly', 'Fast Load']
+},
+
     {
-      title: 'UI/UX Design',
-      description: 'Clean, intuitive designs that focus on user experience and conversion optimization.',
-      icon: '🎨',
-      tags: ['Figma', 'User-Centered']
-    },
+  title: 'UI/UX Design',
+  description: 'We craft user-friendly and visually appealing UI/UX designs for both websites and mobile apps, ensuring seamless user experiences.',
+  icon: '🎨',
+  tags: ['Figma', 'Prototyping', 'Responsive Design']
+},
+
     {
       title: 'Logo Design',
       description: 'Create a memorable brand identity with our modern and versatile logo designs. Perfect for startups and small businesses.',
       icon: '✨',
       tags: ['Adobe', 'Branding']
     },
-   
     {
-      title: 'Custom Softwares Development',
-      description: 'Small to medium-scale custom software solutions that help businesses start their digital journey.',
+      title: 'Custom Software Development',
+      description: 'Small to medium-scale custom software solutions powered by AI that help businesses start their digital journey.',
       icon: '💻',
-      tags: ['Flexible', 'Scalable']
+      tags: ['Web Apps', 'Scalable', 'Secure', 'AI Features']
     }
   ];
 

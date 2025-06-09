@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './Views/Navbar/Navbar';
 import HeroSection from './Views/HeroSection/HeroSection';
 import Services from './Views/Services/Services';
+import TechStack from './Views/TechStack/TechStack.jsx';
 import Portfolio from './Views/Portfolio/Portfolio';
 import About from './Views/About/About';
 import Contact from './Views/Contact/ContactModal';
@@ -153,6 +154,10 @@ const App = () => {
       <Divider />
       <section id="services" className="scroll-mt-20">
         <Services />
+      </section>
+      <Divider />
+      <section id="techstack" className="scroll-mt-20">
+        <TechStack />
       </section>
       <Divider />
       <section id="portfolio" className="scroll-mt-20">
