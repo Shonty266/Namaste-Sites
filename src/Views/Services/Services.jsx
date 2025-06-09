@@ -37,7 +37,7 @@ const Services = () => {
         <div className="text-center mb-16">
   <span className="text-sm font-['ClashDisplay-Bold'] text-purple-400 uppercase tracking-widest">Our Services</span>
   <h2 className="text-4xl font-['ClashDisplay-SemiBold'] mt-2">Crafting Solutions That Drive Success</h2>
-  <p className="font-['ClashDisplay-Regular'] text-gray-400 max-w-2xl mx-auto">
+  <p className="font-['ClashDisplay-Regular'] text-gray-400 max-w-2xl mx-auto mt-4">
     From sleek, responsive web design to powerful SEO strategies, our services are built to help your business stand out and grow.
   </p>
 </div>
