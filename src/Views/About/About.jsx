@@ -111,7 +111,7 @@ const About = () => {
             <div className="inline-block p-px bg-gradient-to-r from-purple-500 to-teal-500 rounded-lg">
               <button 
                 onClick={() => setIsContactModalOpen(true)}
-                className="block px-8 py-4 bg-[#1e1e2e] rounded-lg hover:bg-[#1e1e2e]/80 transition-colors"
+                className="cursor-pointer block px-8 py-4 bg-[#1e1e2e] rounded-lg hover:bg-[#1e1e2e]/80 transition-colors"
               >
                 <span className="text-lg font-medium">Get in Touch</span>
                 <p className="text-sm text-gray-400 mt-1">
