@@ -145,8 +145,8 @@ const ContactModal = ({ isOpen, onClose }) => {
             {/* Header */}
             <div className="text-center mb-6"> {/* Reduced margin */}
               <div className="font-clash">
-                <span className="text-xs font-clash-semibold text-purple-400">Get In Touch</span>
-                <h2 className="text-xl font-clash-bold">Let's Create Something Amazing Together</h2>
+                <span className="text-xs font-clash-semibold text-purple-400">Get In Touch hello</span>
+                <h2 className="text-xl font-clash-bold text-white">Let's Create Something Amazing Together</h2>
               </div>
             </div>
 
@@ -155,7 +155,7 @@ const ContactModal = ({ isOpen, onClose }) => {
               {/* Name and Email Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4"> {/* Reduced gap */}
                 <div className="relative">
-                  <label htmlFor="name" className="block text-xs font-clash-medium text-gray-400 mb-1">
+                  <label htmlFor="name" className="block text-sm font-clash-medium text-gray-400 mb-2">
                     Your Name
                   </label>
                   <input
