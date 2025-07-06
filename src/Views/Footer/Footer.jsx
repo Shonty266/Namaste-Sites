@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaGithub, FaLinkedinIn, FaTwitter, FaInstagram, FaRocket, FaCode, FaHeart } from 'react-icons/fa'
+import { FaGithub, FaLinkedinIn, FaTwitter, FaInstagram } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
 import '../../Fonts.css'
 
@@ -8,16 +8,31 @@ const Footer = () => {
 
   const links = {
     company: [
-        { name: "Home", href: "#home" },
-        { name: "Services", href: "#services" },
-        { name: "Portfolio", href: "#portfolio" },
+      { name: "Home", href: "#home" },
+      { name: "Services", href: "#services" },
+      { name: "Portfolio", href: "#portfolio" },
       { name: "About", href: "#about" },
     ],
     connect: [
-      { icon: <FaLinkedinIn size={18} />, href: "#", label: "LinkedIn" },
-      { icon: <FaGithub size={18} />, href: "#", label: "GitHub" },
-      { icon: <FaTwitter size={18} />, href: "#", label: "Twitter" },
-      { icon: <FaInstagram size={18} />, href: "#", label: "Instagram" }
+      {
+        icon: <FaInstagram size={18} />,
+        href: "https://www.instagram.com/namaste_sites/",
+        label: "Instagram",
+        enabled: true,
+      },
+      {
+        icon: <FaLinkedinIn size={18} />,
+        href: "#",
+        label: "LinkedIn",
+        enabled: false,
+      },
+      {
+        icon: <FaGithub size={18} />,
+        href: "#",
+        label: "GitHub",
+        enabled: false,
+      },
+      
     ]
   }
 
@@ -108,6 +123,14 @@ const Footer = () => {
                 Connect
               </h3>
               <div className="space-y-6">
+                {/* Phone Number */}
+                <div className="flex items-center gap-3 text-base text-gray-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm0 12a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-2zm12-12a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zm0 12a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                  </svg>
+                  <span className="font-['ClashDisplay-Regular']">+91 76219 70107</span>
+                </div>
+                {/* Email */}
                 <a
                   href="mailto:namastesites@outlook.com"
                   className="text-gray-400 hover:text-white transition-colors duration-300 text-base flex items-center gap-3 group"
@@ -115,19 +138,37 @@ const Footer = () => {
                   <MdEmail size={20} className="text-purple-400 group-hover:text-teal-400 transition-colors duration-300" />
                   namastesites@outlook.com
                 </a>
+                {/* Socials */}
                 <div className="flex gap-4">
-                  {links.connect.map((link, index) => (
-                    <a
-                      key={index}
-                      href={link.href}
-                      aria-label={link.label}
-                      className="w-10 h-10 rounded-xl bg-[#1a1a1a]/50 border border-gray-800/50 flex items-center justify-center text-gray-400 hover:text-purple-400 hover:border-purple-500/30 transition-all duration-300 group"
-                    >
-                      <div className="transform group-hover:scale-110 transition-transform duration-300">
-                        {link.icon}
-                      </div>
-                    </a>
-                  ))}
+                  {links.connect.map((link, index) =>
+                    link.enabled ? (
+                      <a
+                        key={index}
+                        href={link.href}
+                        aria-label={link.label}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-10 h-10 rounded-xl bg-[#1a1a1a]/50 border border-gray-800/50 flex items-center justify-center text-gray-400 hover:text-purple-400 hover:border-purple-500/30 transition-all duration-300 group"
+                      >
+                        <div className="transform group-hover:scale-110 transition-transform duration-300">
+                          {link.icon}
+                        </div>
+                      </a>
+                    ) : (
+                      <span
+                        key={index}
+                        className="w-10 h-10 rounded-xl bg-[#1a1a1a]/50 border border-gray-800/50 flex items-center justify-center text-gray-600 cursor-not-allowed relative group"
+                        tabIndex={-1}
+                      >
+                        <div className="transform transition-transform duration-300 opacity-50">
+                          {link.icon}
+                        </div>
+                        <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 rounded bg-gray-900 text-xs text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10">
+                          Coming soon
+                        </span>
+                      </span>
+                    )
+                  )}
                 </div>
               </div>
             </div>

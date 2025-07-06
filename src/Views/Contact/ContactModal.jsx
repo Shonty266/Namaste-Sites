@@ -145,7 +145,7 @@ const ContactModal = ({ isOpen, onClose }) => {
             {/* Header */}
             <div className="text-center mb-6"> {/* Reduced margin */}
               <div className="font-clash">
-                <span className="text-xs font-clash-semibold text-purple-400">Get In Touch hello</span>
+                <span className="text-xs font-clash-bold text-purple-400">Get In Touch!</span>
                 <h2 className="text-xl font-clash-bold text-white">Let's Create Something Amazing Together</h2>
               </div>
             </div>

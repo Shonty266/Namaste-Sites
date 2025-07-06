@@ -48,8 +48,8 @@ const About = () => {
 
 
         {/* Stats Section - New */}
-        <div className="mb-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="mb-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {stats.map((stat, index) => (
               <div 
                 key={index}
@@ -65,7 +65,7 @@ const About = () => {
         </div>
 
         {/* Mission & Vision */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-4 mb-10">
           <div className="p-6 rounded-xl bg-[#1e1e2e] border border-gray-800 hover:border-purple-500/30 transition-colors">
             <h3 className="text-xl font-clash-semibold mb-4 bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent">
               Our Mission
@@ -87,7 +87,7 @@ const About = () => {
         </div>
 
         {/* Values */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {values.map((value, index) => (
             <div
               key={index}

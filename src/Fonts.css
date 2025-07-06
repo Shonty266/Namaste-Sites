@@ -87,5 +87,31 @@
     font-display: swap;
     font-style: normal;
   }
-  
-  
+
+  /* Custom scrollbar for dark bg and gradient thumb */
+::-webkit-scrollbar {
+  width: 10px;
+  background: #000; /* Black track */
+}
+
+::-webkit-scrollbar-track {
+  background: #000; /* Black track */
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: linear-gradient(135deg, #a78bfa 0%, #14b8a6 100%);
+  /* #a78bfa = Tailwind purple-400, #14b8a6 = Tailwind teal-400 */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #c084fc 0%, #2dd4bf 100%);
+  /* Lighter on hover: #c084fc = purple-300, #2dd4bf = teal-300 */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: linear-gradient(135deg, #a78bfa, #14b8a6) #000;
+}
+

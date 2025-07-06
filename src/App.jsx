@@ -1,101 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import Navbar from './Views/Navbar/Navbar';
-import HeroSection from './Views/HeroSection/HeroSection';
-import Services from './Views/Services/Services';
-import TechStack from './Views/TechStack/TechStack.jsx';
-import Portfolio from './Views/Portfolio/Portfolio';
-import About from './Views/About/About';
-import Contact from './Views/Contact/ContactModal';
-import Footer from './Views/Footer/Footer';
-import { Toaster } from 'react-hot-toast';
-import './App.css';
-
-const Divider = () => (
-  <div className="relative">
-    <div className="absolute inset-0 flex items-center" aria-hidden="true">
-      <div className="w-full border-t border-gray-700"></div>
-    </div>
-    <div className="relative flex justify-center">
-      <div className="bg-[#121212] px-3">
-        <div className="h-2 w-2 rounded-full bg-gradient-to-r from-purple-500 to-teal-500"></div>
-      </div>
-    </div>
-  </div>
-);
-
-const ScrollToTop = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  const toggleVisibility = () => {
-    if (window.pageYOffset > 300) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', toggleVisibility);
-    return () => {
-      window.removeEventListener('scroll', toggleVisibility);
-    };
-  }, []);
-
-  const scrollToTop = () => {
-    // Get current scroll position
-    const currentPosition = window.pageYOffset;
-    // Duration of scroll animation in milliseconds
-    const duration = 1000;
-    // Start time of animation
-    const start = performance.now();
-
-    function animation(currentTime) {
-      const timeElapsed = currentTime - start;
-      const progress = Math.min(timeElapsed / duration, 1);
-
-      // Easing function for smooth deceleration
-      const easeOut = t => 1 - Math.pow(1 - t, 3);
-      
-      window.scrollTo(0, currentPosition * (1 - easeOut(progress)));
-
-      if (progress < 1) {
-        requestAnimationFrame(animation);
-      }
-    }
-
-    requestAnimationFrame(animation);
-  };
-
-  return (
-    <>
-      {isVisible && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-8 right-8 p-4 rounded-xl bg-[#1e1e2e]/90 backdrop-blur-sm border border-gray-800 
-            text-gray-400 hover:text-purple-400 hover:border-purple-500/30 
-            shadow-lg hover:shadow-purple-500/10
-            transform hover:-translate-y-1
-            transition-all duration-500 ease-out z-50 group"
-          aria-label="Scroll to top"
-        >
-          <svg
-            className="w-5 h-5 transform group-hover:-translate-y-1 transition-transform duration-500"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M5 10l7-7m0 0l7 7m-7-7v18"
-            />
-          </svg>
-        </button>
-      )}
-    </>
-  );
-};
+import React, { useEffect } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import NotFound from './Views/NotFound/NotFound';
+import MainContent from './Views/MainContent/MainContent';
 
 const App = () => {
   useEffect(() => {
@@ -137,51 +43,57 @@ const App = () => {
       });
     });
 
+    // WATI WhatsApp Widget Script
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.async = true;
+    script.src = 'https://wati-integration-prod-service.clare.ai/v2/watiWidget.js?30908';
+    script.onload = function () {
+      if (window.CreateWhatsappChatWidget) {
+        window.CreateWhatsappChatWidget({
+          enabled: true,
+          chatButtonSetting: {
+            backgroundColor: "#00e785",
+            ctaText: "Chat with us",
+            borderRadius: "25",
+            marginLeft: "0",
+            marginRight: "20",
+            marginBottom: "100",
+            ctaIconWATI: false,
+            position: "right"
+          },
+          brandSetting: {
+            brandName: "Smart Cube Education",
+            brandSubTitle: "undefined",
+            brandImg: "https://www.wati.io/wp-content/uploads/2023/04/Wati-logo.svg",
+            welcomeText: "Hi there!\nHow can I help you?",
+            messageText: "{{page_link}}Hello, %0A I have a question about {{page_link}}",
+            backgroundColor: "#00e785",
+            ctaText: "Chat with us",
+            borderRadius: "25",
+            autoShow: false,
+            phoneNumber: "917621970107",
+          }
+        });
+      }
+    };
+    document.body.appendChild(script);
+
     // Clean up
     return () => {
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.removeEventListener('click', smoothScroll);
       });
+      document.body.removeChild(script);
     };
   }, []);
 
   return (
     <div className="bg-[#121212]">
-      <Navbar />
-      <section id="home" className="scroll-mt-20">
-        <HeroSection />
-      </section>
-      <Divider />
-      <section id="services" className="scroll-mt-20">
-        <Services />
-      </section>
-      <Divider />
-      <section id="techstack" className="scroll-mt-20">
-        <TechStack />
-      </section>
-      <Divider />
-      <section id="portfolio" className="scroll-mt-20">
-        <Portfolio />
-      </section>
-      <Divider />
-      <section id="about" className="scroll-mt-20">
-        <About />
-      </section>
-      
-      <Footer />
-      <ScrollToTop />
-      <Toaster 
-        position="bottom-right"
-        toastOptions={{
-          className: '',
-          style: {
-            background: '#1e1e2e',
-            color: '#fff',
-            borderRadius: '8px',
-            border: '1px solid #374151',
-          },
-        }}
-      />
+      <Routes>
+        <Route path="/" element={<MainContent />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </div>
   );
 };
