@@ -1,19 +1,16 @@
 {
   "name": "Namaste Sites",
-  "short_name": "NS",
+  "short_name": "NamasteSites",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f0f0f",
+  "theme_color": "#0f0f0f",
+  "description": "Transform your online presence with our innovative web solutions. We create mobile-friendly websites designed to attract more clients and grow your business.",
   "icons": [
     {
-      "src": "/android-chrome-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/android-chrome-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
     }
-  ],
-  "theme_color": "#0f0f0f",
-  "background_color": "#0f0f0f",
-  "display": "standalone"
+  ]
 }
