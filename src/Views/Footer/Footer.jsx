@@ -88,7 +88,7 @@ const Footer = () => {
                       </div>
                     </div>
                   </div>
-                  <p className="mt-4 text-sm font-['ClashDisplay-Regular'] text-gray-400 leading-relaxed max-w-sm">
+                  <p className="mt-4 text-sm font-['ClashDisplay-Regular'] text-gray-400 leading-relaxed max-w-xs">
                     Your vision, our expertise – building the future of web together.
                   </p>
                 </div>

@@ -39,10 +39,10 @@ const About = () => {
     About Us
   </span>
   <h2 className="text-4xl font-['ClashDisplay-SemiBold'] mt-2 mb-4">
-    Creative Minds, Modern Solutions
+    Creative Minds for Modern Website Solutions
   </h2>
   <p className="font-['ClashDisplay-Regular'] text-gray-400 max-w-2xl mx-auto">
-    We're a passionate team of young developers and designers focused on building smart, scalable, and visually striking digital experiences for growing brands.
+    We are a passionate team delivering modern website design, project solutions, and creative digital experiences.
   </p>
 </div>
 

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
 import ContactModal from '../Contact/ContactModal'
 
 const Navbar = () => {
@@ -84,11 +85,17 @@ const Navbar = () => {
         />
       )}
       
-      <nav className={`fixed w-full z-30 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-[#0f0f0f]/95 backdrop-blur-md shadow-lg shadow-purple-900/10 py-2' 
-          : 'bg-transparent py-4'
-      }`}>
+      <motion.nav
+  initial={{ opacity: 0 }}
+  animate={{  opacity: 1 }}
+  transition={{ duration: 1.5, ease: 'easeOut' }} 
+
+        className={`fixed w-full z-30 transition-all duration-300 ${
+          scrolled 
+            ? 'bg-[#0f0f0f]/95 backdrop-blur-md shadow-lg shadow-purple-900/10 py-4' 
+            : 'bg-transparent py-4'
+        }`}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             {/* Logo */}
@@ -136,8 +143,7 @@ const Navbar = () => {
                 className="ml-4 px-4 py-2 relative group overflow-hidden rounded-lg cursor-pointer"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-teal-500 transition-transform duration-300 group-hover:scale-105"></div>
-                                  <span className="relative text-white font-medium">Request a Free Quote</span>
-
+                <span className="relative text-white font-medium">Request a Free Quote</span>
               </button>
             </div>
             
@@ -199,13 +205,12 @@ const Navbar = () => {
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-teal-500 transition-transform duration-300 group-hover:scale-105"></div>
                   <span className="relative text-white font-medium">Request a Free Quote</span>
-
                 </button>
               </div>
             </div>
           </div>
         </div>
-      </nav>
+      </motion.nav>
 
       {/* Contact Modal */}
       <ContactModal 

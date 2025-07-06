@@ -71,13 +71,13 @@ const Portfolio = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <span className="text-sm font-['ClashDisplay-Semibold'] text-purple-400 tracking-wider uppercase">
-            Our Work
+            Our Projects
           </span>
           <h2 className="text-4xl font-['ClashDisplay-SemiBold'] mt-2 mb-4">
-            Showcasing What We Build
+            Modern Website & Design Projects
           </h2>
           <p className="font-['ClashDisplay-Regular'] text-gray-400 max-w-2xl mx-auto">
-            Take a look at some of our highlighted projects — crafted with creativity, built with precision, and tailored to solve real-world problems.
+            Explore our portfolio of modern website design solutions and creative projects delivered for clients.
           </p>
         </div>
 
